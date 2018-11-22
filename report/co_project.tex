@@ -1,0 +1,122 @@
+\documentclass[12pt, authoryear]{elsarticle}
+\makeatletter
+\def\ps@pprintTitle{%
+	\let\@oddhead\@empty
+	\let\@evenhead\@empty
+	\def\@oddfoot{}%
+	\let\@evenfoot\@oddfoot}
+\makeatother
+%\usepackage{lmodern}
+% My spacing
+\usepackage{setspace}
+\setstretch{1.5}
+\usepackage{multirow}
+%\DeclareMathSizes{12}{14}{10}{10}
+\usepackage[margin=2.5cm]{geometry}    % How to set margins - optimized for 2.5cm      
+
+% See geometry.pdf to learn the layout options. There are lots.
+\geometry{a4paper}                   			% ... or a4paper or a5paper or ... 
+\usepackage{enumitem}
+\usepackage{mathtools}
+%\geometry{landscape}                		% Activate for rotated page geometry
+\usepackage[parfill]{parskip}    			% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}						% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+% TeX will automatically convert eps --> pdf in pdflatex	
+\usepackage{flafter}			
+\usepackage{setspace}
+%\linespread{1.5}
+\usepackage[font={}]{caption}
+\usepackage[bottom]{footmisc}
+\usepackage[capposition=top]{floatrow}   %figure notes
+\usepackage{lscape}
+%math packages 
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{graphicx,epsf,subfigure}
+\usepackage{pstricks,pst-node,psfrag}
+\usepackage{amsthm,amssymb,amsmath}
+\usepackage{amsmath,bm}
+
+%mathnotes
+\newcommand{\bbeta}{\mbox{\boldmath $\beta$}}
+\newcommand{\beps}{\mbox{\boldmath $\epsilon$}}
+\newcommand{\bX}{\mbox{\boldmath $X$}}
+\newcommand{\bY}{\mbox{\boldmath $Y$}}
+\newcommand{\bI}{\mbox{\boldmath $I$}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\x}{\textsc{\textbf{x}}}
+\newcommand{\xx}{\textsc{x}}
+\definecolor{aurometalsaurus}{rgb}{0.43, 0.5, 0.5}
+%add figure 
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage{hyperref}
+\usepackage[round]{natbib}
+	\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
+\usepackage{soul}
+
+\def\bibsection{\section{References}} %%% Make "References" appear before bibliography
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{tablefootnote}
+\usepackage{lscape} 
+\usepackage{animate}
+
+\renewcommand{\contentsname}{Table of Contents} % change name from Contents to Table of Contents
+
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+%_______________________________________________________________________________________________________%
+%_______________________________________________________________________________________________________%
+%\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+%\usepackage{graphicx,multirow}
+\usepackage{xcolor,colortbl}
+\usepackage{xcolor}
+%\usepackage{graphicx,multirow}
+\usepackage[capposition=top]{floatrow}
+\setcounter{secnumdepth}{4}
+\usepackage{tikz}
+\begin{document}
+
+\begin{frontmatter}  %
+
+\title{Deterministic Models and Optimization: \\ \vspace{0.5cm} \large Programming projects}
+
+\author[Add1]{Reid Falconer}
+\ead{reid.falconer@bracelonagse.eu}
+
+\author[Add1]{Ari Lam}
+\ead{ari.lam@barcelonagse.eu}
+
+\author[Add1]{Evelyn Maria Molina Bolanos }
+\ead{evelyn.molinabolanos@barcelonagse.eu}
+
+\address[Add1]{Barcelona Graduate School of Economics, Barcelona, Spain}
+%\address[Add2]{Some other Institution, Cape Town, South Africa}
+
+%\cortext[cor]{Corresponding author: Nico Katzke}
+
+%\begin{abstract}
+%\small{
+%Abstract to be written here. 
+%}
+%\end{abstract}
+
+%\vspace{1cm}
+
+\begin{keyword}
+\footnotesize{
+Edit distance \sep  Huffman codes \\ \vspace{0.3cm}
+%\textit{JEL classification} L250 \sep L100
+}
+\end{keyword}
+\vspace{0.5cm}
+\end{frontmatter}
+
+\headsep 35pt % So that header does not go over title
+
+
+\end{document}
