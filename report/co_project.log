@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.2)  21 NOV 2018 13:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.2)  23 NOV 2018 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -952,18 +952,48 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 Package titlesec Warning: Non standard sectioning command detected
 (titlesec)                Using default spacing and no format.
 
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/colortbl/colortbl.sty
+)
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 70.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count302
+\lst@gtempboxa=\box65
+\lst@token=\toks58
+\lst@length=\count303
+\lst@currlwidth=\dimen302
+\lst@column=\count304
+\lst@pos=\count305
+\lst@lostspace=\dimen303
+\lst@width=\dimen304
+\lst@newlines=\count306
+\lst@lineno=\count307
+\lst@maxwidth=\dimen305
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count308
+\lst@skipnumbers=\count309
+\lst@framebox=\box66
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen302
-\extrarowheight=\dimen303
-\NC@list=\toks58
+\col@sep=\dimen306
+\extrarowheight=\dimen307
+\NC@list=\toks59
 \extratabsurround=\skip105
 \backup@length=\skip106
 )
-\everycr=\toks59
+\everycr=\toks60
 \minrowclearance=\skip107
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
@@ -971,14 +1001,14 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
-\pgfutil@everybye=\toks60
-\pgfutil@tempdima=\dimen304
-\pgfutil@tempdimb=\dimen305
+\pgfutil@everybye=\toks61
+\pgfutil@tempdima=\dimen308
+\pgfutil@tempdimb=\dimen309
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box65
+\pgfutil@abb=\box67
 (/usr/local/texlive/2016/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -991,23 +1021,23 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-\pgf@x=\dimen306
-\pgf@y=\dimen307
-\pgf@xa=\dimen308
-\pgf@ya=\dimen309
-\pgf@xb=\dimen310
-\pgf@yb=\dimen311
-\pgf@xc=\dimen312
-\pgf@yc=\dimen313
+\pgf@x=\dimen310
+\pgf@y=\dimen311
+\pgf@xa=\dimen312
+\pgf@ya=\dimen313
+\pgf@xb=\dimen314
+\pgf@yb=\dimen315
+\pgf@xc=\dimen316
+\pgf@yc=\dimen317
 \w@pgf@writea=\write5
 \r@pgf@reada=\read3
-\c@pgf@counta=\count302
-\c@pgf@countb=\count303
-\c@pgf@countc=\count304
-\c@pgf@countd=\count305
-\t@pgf@toka=\toks61
-\t@pgf@tokb=\toks62
-\t@pgf@tokc=\toks63
+\c@pgf@counta=\count310
+\c@pgf@countb=\count311
+\c@pgf@countc=\count312
+\c@pgf@countd=\count313
+\t@pgf@toka=\toks62
+\t@pgf@tokb=\toks63
+\t@pgf@tokc=\toks64
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -1024,8 +1054,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count306
-\pgfsyssoftpath@bigbuffer@items=\count307
+\pgfsyssoftpath@smallbuffer@items=\count314
+\pgfsyssoftpath@bigbuffer@items=\count315
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -1037,52 +1067,52 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen314
-\pgf@picmaxx=\dimen315
-\pgf@picminy=\dimen316
-\pgf@picmaxy=\dimen317
-\pgf@pathminx=\dimen318
-\pgf@pathmaxx=\dimen319
-\pgf@pathminy=\dimen320
-\pgf@pathmaxy=\dimen321
-\pgf@xx=\dimen322
-\pgf@xy=\dimen323
-\pgf@yx=\dimen324
-\pgf@yy=\dimen325
-\pgf@zx=\dimen326
-\pgf@zy=\dimen327
+\pgf@picminx=\dimen318
+\pgf@picmaxx=\dimen319
+\pgf@picminy=\dimen320
+\pgf@picmaxy=\dimen321
+\pgf@pathminx=\dimen322
+\pgf@pathmaxx=\dimen323
+\pgf@pathminy=\dimen324
+\pgf@pathmaxy=\dimen325
+\pgf@xx=\dimen326
+\pgf@xy=\dimen327
+\pgf@yx=\dimen328
+\pgf@yy=\dimen329
+\pgf@zx=\dimen330
+\pgf@zy=\dimen331
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
 ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen328
-\pgf@path@lasty=\dimen329
+\pgf@path@lastx=\dimen332
+\pgf@path@lasty=\dimen333
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
 .code.tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen330
-\pgf@shorten@start@additional=\dimen331
+\pgf@shorten@end@additional=\dimen334
+\pgf@shorten@start@additional=\dimen335
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box66
-\pgf@hbox=\box67
-\pgf@layerbox@main=\box68
-\pgf@picture@serial@count=\count308
+\pgfpic=\box68
+\pgf@hbox=\box69
+\pgf@layerbox@main=\box70
+\pgf@picture@serial@count=\count316
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen332
+\pgflinewidth=\dimen336
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
 ations.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen333
-\pgf@pt@y=\dimen334
-\pgf@pt@temp=\dimen335
+\pgf@pt@x=\dimen337
+\pgf@pt@y=\dimen338
+\pgf@pt@temp=\dimen339
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
 e.tex
@@ -1099,13 +1129,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen336
+\pgfarrowsep=\dimen340
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
 e.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen337
-\pgf@sys@shading@range@num=\count309
+\pgf@max=\dimen341
+\pgf@sys@shading@range@num=\count317
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -1114,7 +1144,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
 code.tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box69
+\pgfexternal@startupbox=\box71
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
 de.tex
@@ -1131,7 +1161,7 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
 e.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box70
+\pgfnodeparttextbox=\box72
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
 tex
@@ -1140,8 +1170,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen338
-\pgf@nodesepend=\dimen339
+\pgf@nodesepstart=\dimen342
+\pgf@nodesepend=\dimen343
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
@@ -1156,10 +1186,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen340
-\pgffor@skip=\dimen341
-\pgffor@stack=\toks64
-\pgffor@toks=\toks65
+\pgffor@iter=\dimen344
+\pgffor@skip=\dimen345
+\pgffor@stack=\toks65
+\pgffor@toks=\toks66
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -1168,55 +1198,58 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count310
-\pgfplotmarksize=\dimen342
+\pgf@plot@mark@count=\count318
+\pgfplotmarksize=\dimen346
 )
-\tikz@lastx=\dimen343
-\tikz@lasty=\dimen344
-\tikz@lastxsaved=\dimen345
-\tikz@lastysaved=\dimen346
-\tikzleveldistance=\dimen347
-\tikzsiblingdistance=\dimen348
-\tikz@figbox=\box71
-\tikz@figbox@bg=\box72
-\tikz@tempbox=\box73
-\tikz@tempbox@bg=\box74
-\tikztreelevel=\count311
-\tikznumberofchildren=\count312
-\tikznumberofcurrentchild=\count313
-\tikz@fig@count=\count314
+\tikz@lastx=\dimen347
+\tikz@lasty=\dimen348
+\tikz@lastxsaved=\dimen349
+\tikz@lastysaved=\dimen350
+\tikzleveldistance=\dimen351
+\tikzsiblingdistance=\dimen352
+\tikz@figbox=\box73
+\tikz@figbox@bg=\box74
+\tikz@tempbox=\box75
+\tikz@tempbox@bg=\box76
+\tikztreelevel=\count319
+\tikznumberofchildren=\count320
+\tikznumberofcurrentchild=\count321
+\tikz@fig@count=\count322
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count315
-\pgfmatrixcurrentcolumn=\count316
-\pgf@matrix@numberofcolumns=\count317
+\pgfmatrixcurrentrow=\count323
+\pgfmatrixcurrentcolumn=\count324
+\pgf@matrix@numberofcolumns=\count325
 )
-\tikz@expandcount=\count318
+\tikz@expandcount=\count326
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-))) (./co_project.aux)
+))) (./co_project.aux
+
+LaTeX Warning: Label `my-label' multiply defined.
+
+)
 \openout1 = `co_project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -1270,6 +1303,7 @@ Package caption Info: floatrow package is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: floatrow package is loaded.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
@@ -1281,12 +1315,12 @@ Package caption Info: End \AtBeginDocument code.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/floatrow/fr-longtable.sty
 Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 
-\flrow@LT@lasthead=\box75
-\flrow@LT@prelastfoot=\box76
-\c@FBLTpage=\count319
+\flrow@LT@lasthead=\box77
+\flrow@LT@prelastfoot=\box78
+\c@FBLTpage=\count327
 )
-\AtBeginShipoutBox=\box77
-Package hyperref Info: Link coloring OFF on input line 82.
+\AtBeginShipoutBox=\box79
+Package hyperref Info: Link coloring OFF on input line 122.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1294,29 +1328,28 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count320
+\c@section@level=\count328
 )
-LaTeX Info: Redefining \ref on input line 82.
-LaTeX Info: Redefining \pageref on input line 82.
-LaTeX Info: Redefining \nameref on input line 82.
+LaTeX Info: Redefining \ref on input line 122.
+LaTeX Info: Redefining \pageref on input line 122.
+LaTeX Info: Redefining \nameref on input line 122.
 
 (./co_project.out) (./co_project.out)
 \@outlinefile=\write6
 \openout6 = `co_project.out'.
 
+\c@lstlisting=\count329
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 117.
+LaTeX Font Info:    Try loading font information for U+msa on input line 150.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 117.
+LaTeX Font Info:    Try loading font information for U+msb on input line 150.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Package atenddvi Info: Last page = 1.
- [1
+) [1
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1331,35 +1364,188 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 122.
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
+
+ []
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 203.
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 203.
+
+Overfull \hbox (4.70103pt too wide) in paragraph at lines 205--206
+[]\OT1/cmr/m/n/12 Inductive cases: If we as-sume we have cal-cu-lated the min-i
+-mal align-ment for $\OML/cmm/m/it/12 OPT\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k; l
+\OT1/cmr/m/n/12 )$
+ []
+
+[3]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no à in font cmr12!
+Missing character: There is no í in font cmr12!
+
+Overfull \hbox (6.74026pt too wide) in paragraph at lines 229--232
+\OT1/cmr/m/n/12 X = AAS-R-PRS-GV-PAQS-DS-D-PC-QN-LAAT-PIP-SRPPSSQSC-QKCRADAR-Q-
+GR-WGP 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--232
+
+ []
+
+[4]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--267
+
+ []
+
+[5]
+Overfull \hbox (34.36087pt too wide) in paragraph at lines 275--276
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (19.96072pt too wide) in paragraph at lines 277--278
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+[6]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [7]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 337.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 355.
+
+[8] [9] (./co_project.bbl
+! Missing $ inserted.
+<inserted text> 
+                $
+l.10 ...courses/5454/csci5454_spring2013_CSL3.pdf}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.10 ...courses/5454/csci5454_spring2013_CSL3.pdf}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.11 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.11 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--30
+\OT1/cmr/bx/n/12 URL: \OT1/cmr/m/it/12 http://www.cs.umd.edu/class/fall2017/cms
+c451-0101/Lects/lect06-greedy-
+ []
+
+)
+Package atenddvi Info: Last page = 10.
+ [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 406.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 406.
  (./co_project.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 406.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 406.
 Package rerunfilecheck Info: File `co_project.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
+(rerunfilecheck)             Checksum: F3400D8845781473CD510722A508C986;855.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 406.
  ) 
 Here is how much of TeX's memory you used:
- 30598 strings out of 493014
- 554181 string characters out of 6133352
- 658646 words of memory out of 5000000
- 33610 multiletter control sequences out of 15000+600000
- 18320 words of font info for 67 fonts, out of 8000000 for 9000
+ 32264 strings out of 493014
+ 577729 string characters out of 6133352
+ 699112 words of memory out of 5000000
+ 35176 multiletter control sequences out of 15000+600000
+ 18977 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,7n,54p,10393b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on co_project.pdf (1 page, 86339 bytes).
+ 54i,11n,79p,10393b,1948s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/txfonts/t1xtt.pfb>
+Output written on co_project.pdf (10 pages, 220333 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 268 PDF objects out of 1000 (max. 8388607)
+ 235 compressed objects within 3 object streams
+ 75 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

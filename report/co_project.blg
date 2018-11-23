@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: co_project.aux
+The style file: agsm.bst
+Database file #1: co_project.bib.bib
+Warning--entry type for "aicher" isn't style-file defined
+--line 11 of file co_project.bib.bib
+Warning--entry type for "greedy" isn't style-file defined
+--line 19 of file co_project.bib.bib
+Warning--entry type for "huff_correctness" isn't style-file defined
+--line 28 of file co_project.bib.bib
+Warning--entry type for "Agrawal" isn't style-file defined
+--line 46 of file co_project.bib.bib
+Warning--entry type for "editdistance" isn't style-file defined
+--line 57 of file co_project.bib.bib
+Warning--can't use both volume and number fields in levenshtein1966binary
+You've used 7 entries,
+            2909 wiz_defined-function locations,
+            677 strings with 5685 characters,
+and the built_in function-call counts, 17543 in all, are:
+= -- 2766
+> -- 214
+< -- 1
++ -- 1239
+- -- 63
+* -- 1388
+:= -- 3738
+add.period$ -- 7
+call.type$ -- 7
+change.case$ -- 97
+chr.to.int$ -- 7
+cite$ -- 8
+duplicate$ -- 96
+empty$ -- 206
+format.name$ -- 85
+if$ -- 3120
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 3
+newline$ -- 29
+num.names$ -- 70
+pop$ -- 59
+preamble$ -- 1
+purify$ -- 105
+quote$ -- 0
+skip$ -- 85
+stack$ -- 0
+substring$ -- 3763
+swap$ -- 17
+text.length$ -- 99
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 26
+warning$ -- 1
+while$ -- 150
+width$ -- 0
+write$ -- 88
+(There were 6 warnings)

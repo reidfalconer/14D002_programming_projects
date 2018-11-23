@@ -36,7 +36,6 @@
 \usepackage{pstricks,pst-node,psfrag}
 \usepackage{amsthm,amssymb,amsmath}
 \usepackage{amsmath,bm}
-
 %mathnotes
 \newcommand{\bbeta}{\mbox{\boldmath $\beta$}}
 \newcommand{\beps}{\mbox{\boldmath $\epsilon$}}
@@ -64,10 +63,51 @@
 \usepackage{animate}
 
 \renewcommand{\contentsname}{Table of Contents} % change name from Contents to Table of Contents
-
 \usepackage{titlesec}
-
 \setcounter{secnumdepth}{4}
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+
+\usepackage{listings}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+		language=Python,
+		basicstyle=\ttm,
+		otherkeywords={self},             % Add keywords here
+		keywordstyle=\ttb\color{deepblue},
+		emph={MyClass,__init__},          % Custom highlighting
+		emphstyle=\ttb\color{deepred},    % Custom highlighting style
+		stringstyle=\color{deepgreen},
+		frame=tb,                         % Any extra options here
+		showstringspaces=false            % 
+}}
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+	\pythonstyle
+	\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+		\pythonstyle
+		\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
 
 %_______________________________________________________________________________________________________%
 %_______________________________________________________________________________________________________%
@@ -107,16 +147,260 @@
 
 %\vspace{1cm}
 
-\begin{keyword}
-\footnotesize{
-Edit distance \sep  Huffman codes \\ \vspace{0.3cm}
-%\textit{JEL classification} L250 \sep L100
-}
-\end{keyword}
-\vspace{0.5cm}
 \end{frontmatter}
 
-\headsep 35pt % So that header does not go over title
+In this report, we analyse two algorithms, namely the Edit distance to calculate the least number of edit operations that are necessary to modify one string into another and Huffman codes to construct an optimal prefix code given input text. For each of these algorithms, we provide a brief overview of their key concepts, present their pseudo code, outline a proof of correctness, and conduct a complexity analysis. Furthermore, the Python code is available for both algorithms.
 
+\section{Edit Distance}
+
+\subsection{Algorithm Overview}
+
+In computer science, edit distance is a way of quantifying how dissimilar two strings are to one another by calculating the minimum number of edit operations necessary to transform one string into the other. One of the simplest sets of edit operations is that defined by \cite{levenshtein1966binary} which consist of three operations on a string: (i) I: Insertion of a character, (ii) D: Deletion of a character, and (iii) S: Substitution of a character.
+
+Each operation has an imputed cost\footnote{In Levenshtein's  definition, each of these operations has unit cost (except substitution of a single symbol by itself has zero cost).}, and subsequently the algorithm strives to minimise the cost of edit operations (i.e.the  number of operations $\{ D, I, S \}$).
+
+For example if each operation has a unit cost and we started with the sequence
+\[  X = \langle A , B , C , A , D , A \rangle  \]
+we could convert it to
+\[ Y = \langle A , B , A , D , C \rangle \]
+with three edit operations (i.e. delete the C, delete the last A and insert a C). This is the best that can be done, so the minimum edit distance is 3.  Nevertheless, the notion of edit distance can be generalised to allow different weights for alternative edit operations. 
+
+To compute this algorithm, a dynamic programming approach is used. Specifically, this technique allows one to construct the solution of a larger problem instance by composing solutions to smaller instances, and the solution to each smaller instance can be used in multiple larger instances\citep{Agrawal}.
+
+Furthermore, edit distances find applications in many different fields, for example in bioinformatics; the edit distance can be used to quantify the similarity of DNA and protein sequences.
+
+\subsection{Pseudo code }
+
+To program this algorithm the characters of the strings “$s_1$” and “$s_2$” are displayed in an array form. The algorithm fills the entries in a matrix whose two dimensions equal the lengths of the two strings\citep{editdistance}. Each jump horizontally or vertically, in the matrix, corresponds to an insertion or a deletion, respectively. Since the algorithm takes into consideration the cost of each operation the final output always minimizes the cost locally. \\
+
+\begin{python}
+m = len(str1)
+n = len(str2)
+# Creating an array, storing the results from the subproblem
+D = [[0 for x in range(n+1)] for x in range(m+1)] 
+  # Filling the list from top to bottom 
+  for i in range(m+1): 
+    for j in range(n+1): 
+       if i == 0: 
+         D[i][j] = j  # insertion  
+       elif j == 0: 
+         D[i][j] = i    #deletion
+       elif str1[i-1] == str2[j-1]: 
+         D[i][j] = D[i-1][j-1] 
+       else: 
+         D[i][j] = min(D[i][j-1] + 1, # insertion     
+           D[i-1][j] + 1,   # deletion
+           D[i-1][j-1]+1) # substitution
+	
+\end{python}
+
+
+\subsection{Proof of Correctness}
+
+Since the algorithm is built recursively, the standard technique for proving its correctness is induction. Our claim is that any alignment of strings $s_1, s_2$ satisfying the recursion relation is done at a minimal cost. Following \cite{aicher} the proof of correctness considers the following:
+
+\begin{itemize}
+	\item Base case: The edit distance between any string, $s$ (i.e. either string X or Y) and an empty string is $len(s)$, i.e. just insert all the characters in $s$ or drop all characters in $s$. 
+	
+	\item Inductive cases: If we assume we have calculated the minimal alignment  for $OPT(k,l)$ for $k < i, l < j$, where $ O P T ( i , j )$  is the minimum cost of aligning the substrings $ s _ { 1 } [ 1 \ldots i ] \text { and } s _ { 2 } [ 1 \ldots j ]$, then there are only 3 possible previous sub-alignments based on the last operator(s):
+	
+\begin{enumerate}
+	\item Substitution: We substitute $s_1[i]$ for $s_2[j]$, with a cost equal to $c(Sub)$. The rest of the alignment cost is from aligning $s_1[1\dots i-1]$ and $s_2[1\dots j-1]$. Therefore the minimum cost ending with a substitution is $OPT (i - 1, j - 1) + c(Sub)$.
+	
+	\item Delete and insert: We add a gap character after $s_2[j]$ to match $s_1[i]$ with a cost of $c(InDel)$. The rest of the alignment cost is from aligning $s_1[1\dots i-1]$ and $s_2[1\dots j]$. Therefore the minimum cost ending with a substitution is $OPT (i - 1, j) + c(Sub)$
+	
+	\item Insert and delete: Similarly, we add a gap character after $s_1[i]$ to match $s_1[j]$ with a cost of $c(InDel)$. The rest of the alignment cost is from aligning $s_1[1\dots i]$ and $s_2[1\dots j-1]$. Therefore the minimum cost ending with a substitution is $OPT (i, j − 1) + c(Sub)$
+\end{enumerate}
+
+\item Taking the minimum over the possible operations gives the recursive relation. Since these are the only possible paths to aligning substrings $(i,j)$, the recursion gives the minimal cost for aligning $(i,j)$.
+
+\end{itemize}
+
+\subsection{Complexity}
+
+Given that $s_1$ is always a suffix of the first input string and that $s_2$ is always a suffix of the second input string. Since there are $n+1$ suffixes of the first input string and $m+1$ suffixes of the second input strings, the total number of sub-problems is $(n+1)(m+1)$. Therefore the time-complexity of the algorithm is $\mathcal{O}(nm)$ where $m$ and $n$ are the lengths of the two strings ($s_1$ and $s_2$) respectively\footnote{It takes $\mathcal{O}(nm)$ time to fill in the $n*m$ dynamic programming matrix: the pseudocode consists of a nested `for' loop inside of another `for' loop.}.
+
+\subsection{Task Results}
+
+\begin{enumerate}
+	\item DNA \\
+X = ACTACTAGATTACTTACGGATCAGGTACTTTAGAGGCTTGCAACCA \\
+Y = TACTAGCTTACTTACCCATCAGGTTTTAGAGATGGCAACCA
+\item Proteins \\
+X = AASRPRSGVPAQSDSDPCQNLAATPIPSRPPSSQSCQKCRADARQGRWGP \\
+Y = SGAPGQRGEPGPQGHAGAPGPPGPPGSDG \\
+\end{enumerate}
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+	\centering
+	\caption{Edit Distance and penalized Edit Distance for DNA and protein sequences X and Y}
+	\label{my-label}
+\begin{tabular}{|
+		>{\columncolor[HTML]{C0C0C0}}l |c|c|}
+	\hline
+	\textbf{}                             & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{DNA}} & \cellcolor[HTML]{C0C0C0}\textbf{Proteins} \\ \hline
+	\textbf{Edit Distance (X, Y)}         & 10                                                        & 37                                        \\ \hline
+	\textbf{Penalty Edit Distance  (X,Y)} & 15                                                        & 58                                        \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Huffman codes}
+
+\subsection{Algorithm Overview}
+
+Huffman coding is a lossless data compression algorithm. It assigns variable-length codes to each symbol, lengths of the assigned codes are based on the frequencies of corresponding symbols. The smallest code is assigned to the most frequent symbol and vice versa \citep{kleinberg2006algorithm}.
+
+Prefix Codes, which the bit sequences are assigned in such a way that the code assigned to one symbol is different from any other symbols, are assigned so that Huffman Coding makes sure that there is no ambiguity when decoding the generated bitstream.
+
+To compute this algorithm, a greedy approach is used. This technique looks at the frequency of each character at each round and stores it as a binary string in an optimal way (i.e. at each step, the algorithm makes a "greedy" decision to merge the two subtrees with least weight).
+
+\subsection{Pseudo code} 
+
+The pseudocode for Huffman’s algorithm is given below. Let $C$ denote the set of characters,
+and let $n = |C|$. Each character $x \in C$ is associated with an occurrence probability $prob[x]$. Initially, the characters are all stored in a priority queue Q. Recall that this data structure
+can be built initially in $\mathcal{O}(n)$ time, and we can extract the element with the smallest key in
+$\mathcal{O}(n \log n)$ time and insert a new element in $\mathcal{O}(n \log n)$ time. The objects in $Q$ are sorted by probability. Note that with each execution of the for-loop, the number of items in the queue decreases by one. So, after $n - 1$ iterations, there is exactly one element left in the queue,
+and this is the root of the final prefix code tree \citep{greedy}. \\
+
+\begin{python}
+huffman(C, prob) { # C = chars, prob = probabilities
+   for each (x in C) {
+      add x to Q sorted by prob[x] # add all to priority queue
+   }
+   for (i = 1 to |C| - 1) { # repeat until only 1 item in queue
+	z = new internal tree node
+	left[z] = x = extract-min from Q # extract min probabilities
+	right[z] = y = extract-min from Q
+	prob[z] = prob[x] + prob[y] # z's probability is their sum
+	insert z into Q # z replaces x and y
+   }
+   return the last element left in Q as the root
+}
+\end{python}
+
+\subsection{Proof of Correctness}
+
+We prove the correctness of Huffman’s algorithm by following \cite{huff_correctness} who use induction on the number of symbols $n$ in the alphabet. The base case, $n = 2$  is evident because the only possibility (that is not suboptimal) is a code where both codewords are one bit long, which is what Huffman’s algorithm produces in this case. Suppose that the algorithm produces an optimal tree for alphabets with $n - 1 \geq     2$ symbols and their associated frequencies. We will prove that it provides an optimal tree for alphabets with $n$ symbols and their associated frequencies.
+
+Let $A$ be an alphabet with $n$ symbols,  and $f(a)$ be the frequency for each $a \in A$. Let H be the tree produced by Huffman’s algorithm for $A$, $f$. We must prove that $H$ is optimal for this input.
+By the algorithm, there are two symbols of minimum frequency (according to $f$) that are siblings in $H$;
+let these symbols be $x$ and $y$. Let $z$ be a new symbol (that is not in $A$); and let $A^{\prime}$ = $(A - \{x, y\}) \cup {z}$ and $f^{\prime}$ be frequencies of the symbols in $A^{\prime}$ defined by :
+\[
+f ^ { \prime } ( a ) = \left\{ \begin{array} { l l } { f ( a ) , } & { \text { if } a \neq z } \\ { f ( x ) + f ( y ) , } & { \text { if } a = z } \end{array} \right.
+\]
+Finally, let $H^{\prime}$ be the tree obtained from $H$ by removing $x$ and $y$ and replacing their parent by $z$. From the definition of weighted average depth (ad), we have
+\[
+\mathbf { a d } ( H ) = \mathbf { a d } \left( H ^ { \prime } \right) + ( f ( x ) + f ( y ) )
+\]
+Note that $H^{\prime}$ is a tree produced by Huffman's algorithm on input $A^{\prime}$, $f^{\prime}$. $A^{\prime}$ has $n - 1$ symbols so, by induction hypothesis
+\[
+H ^ { \prime } \text { is optimal for } A ^ { \prime } , f ^ { \prime }
+\]
+Now, let $T$ be an optimal tree for $A$, $f$. Without loss of generality, we can assume that $x$ and $y$ are siblings and are at maximum depth of $T$.  Let $T^{\prime}$  be obtained from T as $H^{\prime}$  was obtained from $H$. Thus, $T^{\prime}$ is a tree for $A^{\prime}$ , $f^{\prime}$ . We have by definition of \textbf{ad}:
+\[
+\begin{aligned} \mathbf { a } \mathbf { d } ( T ) & = \mathbf { a d } \left( T ^ { \prime } \right) + ( f ( x ) + f ( y ) ) \\ & \geq \mathbf { a d } \left( H ^ { \prime } \right) + ( f ( x ) + f ( y ) ) \\ & = \mathbf { a d } ( H ) \end{aligned}
+\]
+Since $T$ is optimal for $A$, $f$, so is $H$. So, Huffman's algorithm produces optimal trees for alphabets with $n$ symbols and their associated frequencies.
+
+Furthermore, two claims are proved intuitively below: 
+
+\textit{1. In an optimum code, symbols that occur more frequently will have shorter codewords than symbols that occur less frequently.}
+
+\textbf{Proof:} Given that more frequent symbols have smaller codes and vice versa, a code that assigns longer codewords to symbols that occur more frequently cannot be optimum. Therefore, this first  statement is true.
+
+\textit{2. In an optimum code, the two symbols that occur least frequently will have the same length.}
+
+\textbf{Proof:} Let’s make an assumption that an optimum code exists for the two least frequent symbols but Code2 has a longer than Code1 (e.g. Code1: 01001, Code2: 0100001). Due to the property of prefix code, even if we drop the last 2 bits of Code2, Code 1 and Code 2 would still be distinct (i.e. Code1: 01001, Code2: 01000). Since they are the least frequent symbols, nothing can be longer than them which means the shortened Code2 would never become the prefix of other codewords. Now we have a shorter length than the previous one but this violates our initial assumption. Therefore, this second statement is also true.
+
+\subsection{Complexity}
+
+The complexity is  $\mathcal{O}(n \log n)$. There are  $\mathcal{O}(n)$ iterations for each symbol. Therefore, using a heap to store the trees, each iteration requires  $\mathcal{O}(n \log n)$ time to determine the lowest frequent symbols and insert that tree. 
+
+\subsection{Task Results}
+
+\subsubsection{Compression Rates}
+
+The code obtained from the Huffman algorithm is a variable-length code since the code-lengths vary from letter to letter. When there is a constant $l_0$ such that $l(c) = l_0$ for all $c \in C$ , it is called a fixed-length code. To calculate the compression rate obtained from the Huffman code, we compared the code-length of a given input text in a fixed-length code with the code-length of Huffman's variable-length code. The minimum number of bits necessary to code both the alphabets is $I_0 = 8 $ (i.e. UTF-8). So the compression rate of encoding the text is given by:
+\[
+ { Comp }  = \left( 1 - \frac {  { Codelength } } { l _ { 0 } \times  { Textlength } } \right) \times 100
+\]
+where $Codelength$ is the length of the text in bits when coded using Huffman encoding and $Textlength$ is the number of letters and symbols in the text.
+
+When evaluating the compression rates across the two texts (see Table \ref{cr}) we find that both texts have almost identical compressibility rates with the Hamlet text and Goethe text having compression rates of 46.87\% and 46.89\% respectively.  
+ 
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+	\centering
+	\caption{Compression rates across texts using the standard distribution for the two sample texts. $Textlength$ is measured in number of letters and $Codelength$, in bits}
+	\label{cr}
+	\begin{tabular}{|
+			>{\columncolor[HTML]{C0C0C0}}l |c|c|}
+		\hline
+		\textbf{}                 & \cellcolor[HTML]{C0C0C0}\textbf{Hamlet} & \cellcolor[HTML]{C0C0C0}\textbf{Goethe} \\ \hline
+		\textbf{Text Length}      & 802                                     & 1156                                    \\ \hline
+		\textbf{Code Length}      & 3402                                    & 4903                                    \\ \hline
+		\textbf{Compression Rate ($Comp$)} & 46.84\%                                   & 46.89\%                                   \\ \hline
+	\end{tabular}
+\end{table}
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+	\caption{Huffman Text Encoding}
+	\label{my-label}
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\multicolumn{2}{|c|}{\cellcolor[HTML]{C0C0C0}\textbf{Hamlet}} & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Goethe}} \\ \hline
+		Huffman Code                  & Alphabet                      & Huffman Code                    & Alphabet                   \\ \hline
+		00                             &   \textvisiblespace                            & 101                              & e                          \\
+		0101                           & i                             & 111                             &             \textvisiblespace               \\
+		0110                           & t                             & 0000                               & u                          \\
+		1000                          & l                             & 0001                               & a                          \\
+		1001                          & o                             & 0011                              & s                          \\
+		1011                          & a                             & 0111                             & r                          \\
+		1110                          & e                             & 1000                            & h                          \\
+		01001                          & y                             & 1010                            & i                          \\
+		01110                          & ,                             & 1011                            & n                          \\
+		01111                          & d                             & 01100                            & l                          \\
+		11000                         & h                             & 10010                           & m                          \\
+		11001                         & r                             & 10011                           & t                          \\
+		11011                         & m                             & 11001                           & c                          \\
+		11110                         & n                             & 11011                           & d                          \\
+		11111                         & s                             & 001000                            & z                          \\
+		010000                         & v                             & 001001                            & f                          \\
+		010001                         & f                             & 001010                            & g                          \\
+		101001                        & w                             & 011010                           & k                          \\
+		101010                        & u                             & 011011                           & b                          \\
+		110100                        & b                             & 110000                          & o                          \\
+		1010001                       & .                             & 110001                          & w                          \\
+		1010110                       & c                             & 110101                          &     ,                       \\
+		1101010                       & p                             & 00101101                          & !                          \\
+		1101011                       & !                             & 00101110                          & .                          \\
+		10100000                      & '                             & 00101111                          & \"{o}                          \\
+		10100001                      & k                             & 11010000                        & ;                          \\
+		10101111                      & g                             & 11010001                        & \"{u}                          \\
+		101011100                     & x                             & 11010010                        & p                          \\
+		101011101                     & ?                             & 001011000                         & q                          \\
+		\cellcolor[HTML]{EFEFEF}      & \cellcolor[HTML]{EFEFEF}      & 001011001                         & \"{a}                         \\
+		\cellcolor[HTML]{EFEFEF}      & \cellcolor[HTML]{EFEFEF}      & 110100110                       & j                          \\
+		\cellcolor[HTML]{EFEFEF}      & \cellcolor[HTML]{EFEFEF}      & 110100111                       & v                          \\ \hline
+	\end{tabular}
+\end{table}
+
+
+\pagebreak
+\bibliographystyle{agsm}
+\setcitestyle{authoryear}
+\bibliography{co_project.bib}
+
+\appendix
+\setcounter{figure}{0}
 
 \end{document}

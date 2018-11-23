@@ -1,0 +1,35 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{Agrawal}{2017}{Agrawal}
+Agrawal, K.  \harvardyearleft 2017\harvardyearright , `Dynamic programming'.
+\newline\harvardurl{http://www.classes.cec.wustl.edu/~cse341/web/handouts/lecture11.pdf}
+
+\harvarditem{Aicher \harvardand\ Hand}{2013}{aicher}
+Aicher, C. \harvardand\ Hand, R.  \harvardyearleft 2013\harvardyearright ,
+  `Sequence alignment lecture'.
+\newline\harvardurl{http://tuvalu.santafe.edu/~aaronc/courses/5454/csci5454_spring2013_CSL3.pdf}
+
+\harvarditem{Hadzilacos}{2017}{huff_correctness}
+Hadzilacos, V.  \harvardyearleft 2017\harvardyearright , `Correctness and
+  running time of huffman's algorithm'.
+\newline\harvardurl{http://www.cs.toronto.edu/~vassos/teaching/c73/handouts/huffman.pdf}
+
+\harvarditem{Kleinberg \harvardand\ Tardos}{2006}{kleinberg2006algorithm}
+Kleinberg, J. \harvardand\ Tardos, E.  \harvardyearleft 2006\harvardyearright ,
+  {\em Algorithm design}, Pearson Education India.
+
+\harvarditem{Levenshtein}{1966}{levenshtein1966binary}
+Levenshtein, V.~I.  \harvardyearleft 1966\harvardyearright , Binary codes
+  capable of correcting deletions, insertions, and reversals, {\em in} `Soviet
+  physics doklady', Vol.~10, pp.~707--710.
+
+\harvarditem{Mount}{2017}{greedy}
+Mount, D.  \harvardyearleft 2017\harvardyearright , `Greedy algorithms: Huffman
+  coding'.
+\newline\harvardurl{http://www.cs.umd.edu/class/fall2017/cmsc451-0101/Lects/lect06-greedy-huffman.pdf}
+
+\harvarditem{Standford}{n.d.}{editdistance}
+Standford  \harvardyearleft n.d.\harvardyearright , `Edit distance'.
+\newline\harvardurl{https://nlp.stanford.edu/IR-book/html/htmledition/edit-distance-1.html}
+
+\end{thebibliography}
